@@ -1,7 +1,7 @@
 /*
  * Activity 2.5.2
  *
- * The runner for the PhraseSolverGame
+ * Vyas | Sathvik
  */
 public class Runner
 {
