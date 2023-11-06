@@ -1,7 +1,7 @@
 /*
  * Activity 2.5.2
- *
- *  The PhraseSolver class the PhraseSolverGame
+ * Vyas| Sathvik
+ *  
  */
 import java.util.Scanner;
   
@@ -34,20 +34,20 @@ public class PhraseSolver
     {
       System.out.println(""); 
       System.out.println(currentPlayer.getName()+"'s Turn!"); 
-      System.out.println("Enter a guess");
+      System.out.println("Enter your guess");
       String guess = input.nextLine(); 
       /* your code here - game logic */
       correct = board.guessLetter(guess); 
       win = board.isSolved(guess);
       if (win == true) {
         if (player1.getPoints()>player2.getPoints()){
-        System.out.println("You Win "+ player1.getName()+"!");
+        System.out.println("Congradulations, you win "+ player1.getName()+"!");
         System.out.println(player1.getName()+"'s Points: "  + player1.getPoints());
         System.out.println(player2.getName()+"'s Points: "  + player2.getPoints());
         break;
         }
         else if (player2.getPoints()>player1.getPoints()){
-        System.out.println("You Win "+ player2.getName()+"!");
+        System.out.println("Congradulations, you win "+ player2.getName()+"!");
         System.out.println(player1.getName()+"'s Points: "  + player1.getPoints());
         System.out.println(player2.getName()+"'s Points: "  + player2.getPoints());
         break;
@@ -60,7 +60,7 @@ public class PhraseSolver
         if (correct == true) {
           currentPlayer.setPoints(1.0);
         }
-      System.out.println("Here is how much of the word you have guessed: " + board.getSolvedPhrase());
+      System.out.println("Amount of letters you've guessed: " + board.getSolvedPhrase());
       System.out.println(currentPlayer.getName()+"'s Points: "  + currentPlayer.getPoints());
       }
 
