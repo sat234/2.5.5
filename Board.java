@@ -1,7 +1,7 @@
 /*
  * Activity 2.5.2
- *
- * A Board class the PhraseSolverGame
+ * Vyas | Sathvik
+ * 
  */
 import java.util.Scanner;
 import java.io.File;
@@ -12,7 +12,7 @@ public class  Board
   private String phrase;
   private int currentLetterValue; 
 
-  // constructor that sets the initial values of the instance variables 
+  
   public Board() {
     solvedPhrase = ""; 
     phrase = loadPhrase(); 
@@ -92,24 +92,16 @@ public class  Board
 
   public boolean guessLetter(String guess)
   {
-    /* Preconditions 
-     * guess is an actual letter 
-     * solvedPhrase has underscores in the right places 
-     * Postconditions 
-     * foundLetter is true 
-     * solvedPhrase has the letters guessed along with the underscores for other places 
-     */
+  
 
-    // initial values of variables 
-    // foundLetter is false beause the right letter has not been found 
-    // newSolvedPhrase is empty because nothing has been guessed yet 
+   
     boolean foundLetter = false;
     String newSolvedPhrase = "";
     
-    // for each letter in the chosen phrase, check if any letter is equivalent to the guess 
+ 
     for (int i = 0; i < phrase.length(); i++)
     {
-      if (phrase.substring(i, i + 1).equals(guess)) // if the letters are equal, add it to the newSolvedPhrase
+      if (phrase.substring(i, i + 1).equals(guess)) 
       {
         newSolvedPhrase += guess + " ";
         foundLetter = true;
