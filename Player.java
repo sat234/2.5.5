@@ -10,13 +10,13 @@ public class Player
 
  // constructor 
  public Player() {
-  System.out.println("Please enter the player's name"); 
+  System.out.println("Enter your name: "); 
   Scanner sc = new Scanner(System.in); 
   String playerName = sc.nextLine(); 
 
   name = playerName; 
   points = 0; 
-  System.out.println("You are all set, " + name + "! Let's start"); 
+  System.out.println("Your name is " + playername); 
  }
 
  public Player(String userName) {
