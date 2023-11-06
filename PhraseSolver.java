@@ -25,21 +25,21 @@ public class PhraseSolver {
             boolean correct = board.guessLetter(guess);
             boolean win = board.isSolved(guess);
 
-            if (win) {
+            if (win || isFullGuess()) {
                 determineWinner();
-                break; // Stop the game when a player wins
+                break;
             } else {
                 updatePlayerStats(currentPlayer, correct);
                 displayGameStatus(currentPlayer, board.getSolvedPhrase());
                 currentPlayer = (currentPlayer == player1) ? player2 : player1;
             }
-            
-            // Check if the entire phrase has been guessed
-            if (board.getSolvedPhrase().equals(board.getPhrase())) {
-                System.out.println("\nCongratulations, the entire phrase has been guessed!");
-                break; // Stop the game when the entire phrase is guessed
-            }
         }
+    }
+
+    private boolean isFullGuess() {
+        String solution = board.getPhrase().replaceAll(" ", "");
+        String guessedPhrase = board.getSolvedPhrase().replaceAll(" ", "");
+        return guessedPhrase.equals(solution);
     }
 
     private void determineWinner() {
